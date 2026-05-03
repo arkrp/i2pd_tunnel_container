@@ -1,0 +1,13 @@
+[Unit]
+Description=autoboots a i2pd proxy container
+
+[Service]
+Restart=always
+WorkingDirectory=/home/hannahnelson/applications/i2pd_tunnel_container
+ExecStart=/usr/bin/bash launch.sh
+ExecStop=/usr/bin/bash shutdown.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
