@@ -7,6 +7,7 @@ podman run\
    -v i2p_netDb:/root/.i2pd/netDb\
    -v i2p_peerProfiles:/root/.i2pd/peerProfiles\
    -v i2p_tags:/root/.i2pd/tags\
+   -v i2p_keys:/root/.i2pd/keys\
    --network=host\
    --hostname tunnelrat\
    --name tunnelrat\

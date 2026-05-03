@@ -8,11 +8,8 @@ RUN apt-get install -y curl
 RUN curl -L -O https://github.com/PurpleI2P/i2pd/releases/download/2.60.0/i2pd_2.60.0-1trixie1_amd64.deb
 RUN apt-get install -y /app/i2pd_2.60.0-1trixie1_amd64.deb
 RUN mkdir /root/.i2pd
-COPY config/tunnels.conf /root/.i2pd
-RUN mkdir /root/.i2pd/keys
-COPY config/keys /root/.i2pd/keys
+COPY tunnels.conf /root/.i2pd
 #section-start summon the starting program!
-#COPY ./files/activate.sh .
-#CMD ["bash","./activate.sh"]
+CMD ["i2pd"]
 #section-end
 #section-end
