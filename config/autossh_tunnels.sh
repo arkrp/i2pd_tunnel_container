@@ -1,4 +1,5 @@
 sleep 30
+export AUTOSSH_GATETIME=0
 nohup autossh -M 0\
    -o "StrictHostKeyChecking=accept-new"\
    -o "ServerAliveInterval 30"\
