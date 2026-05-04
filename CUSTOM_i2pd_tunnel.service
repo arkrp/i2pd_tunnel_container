@@ -1,5 +1,7 @@
 [Unit]
 Description=autoboots a i2pd proxy container
+After=network-online.target
+Requires=podman.socket
 
 [Service]
 Restart=always
